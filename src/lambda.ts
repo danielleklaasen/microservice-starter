@@ -1,5 +1,5 @@
-import { APIGatewayEvent, Callback, Context, Handler } from 'aws-lambda';
-import awsServerlessExpress = require('aws-serverless-express');
+import { APIGatewayEvent, Context, Handler } from 'aws-lambda';
+import * as awsServerlessExpress from 'aws-serverless-express';
 import app from './app';
 
 // NOTE: If you get ERR_CONTENT_DECODING_FAILED in your browser, this is likely

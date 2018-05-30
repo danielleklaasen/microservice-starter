@@ -12,7 +12,7 @@ provider:
 
 functions:
   init:
-    handler: dist/lambda.init
+    handler: src/lambda.init
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'

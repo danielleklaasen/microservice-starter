@@ -18,7 +18,6 @@
     "@types/node": "^8.0.57",
     "serverless-offline": "^3.24.5",
     "serverless-webpack": "^4.0.0",
-    "ts-loader": "^2.3.7",
     "typescript": "^2.5.2",
     "webpack": "^3.6.0"
   },
