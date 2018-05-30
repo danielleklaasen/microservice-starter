@@ -10,3 +10,6 @@ jspm_packages
 
 # IDEA
 .idea
+
+# Build files
+dist
