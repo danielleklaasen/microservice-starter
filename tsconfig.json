@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
     "sourceMap": true,
+    "target": "es5",
+    "moduleResolution": "node",
     "lib": [
       "es5",
       "es2015.promise"
-    ]
+    ],
+    "outDir": "dist",
+    "rootDir": "./src"
   },
   "exclude": [
     "node_modules"
