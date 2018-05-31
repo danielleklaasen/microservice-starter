@@ -12,7 +12,7 @@ provider:
 
 functions:
   init:
-    handler: src/app.init
+    handler: dist/app.init
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
