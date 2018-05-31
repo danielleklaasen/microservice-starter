@@ -47,7 +47,7 @@ $ serverless config credentials --provider aws --key ACCESS-KEY-ID --secret SECR
 
 - Configure MongoDB
 
-Add your personal url in app.ts, line 11.
+Add your personal url in app.ts, line 18.
 
 - Build and run the project
 
