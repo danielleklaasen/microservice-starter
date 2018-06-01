@@ -69,9 +69,10 @@ $ sls deploy
 
 ## Built With
 
-* [Serverless](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [TypeScript](https://maven.apache.org/) - Dependency Management
-* [MongoDB](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Serverless](http://www.dropwizard.io/1.0.2/docs/) - The Serverless Application framework
+* [Express](https://github.com/expressjs/express) - Web framework for Node
+* [TypeScript](https://maven.apache.org/) - TypeScript
+* [MongoDB](https://rometools.github.io/rome/) - Database
 
 ## Authors
 
