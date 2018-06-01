@@ -1,5 +1,10 @@
 # Microservice starter in NodeJS & Typescript
 
+This is a Serverless (micro)service starter to kickstart your Express / Typescript project.
+
+To learn how to set up a Serverless project, take a look at the [tutorial]() I wrote on Medium.
+The rest of the project is inspired by the [TypeScript-Node-Starter](https://github.com/Microsoft/TypeScript-Node-Starter) by Microsoft.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -43,16 +48,16 @@ $ serverless config credentials --provider aws --key ACCESS-KEY-ID --secret SECR
 
 - Configure MongoDB
 
-Add your personal url in app.ts, line 18.
+Add your personal url in the .env file.
 
 - Build and run the project
 
 ```
-$ tsc
+$ npm run build
 ```
 
 ```
-$ sls offline start
+$ npm run start
 ```
 
 Go to http://localhost:3000 and, if everything went right, you will now see the working project! :)
@@ -60,14 +65,15 @@ Go to http://localhost:3000 and, if everything went right, you will now see the 
 ## Deployment
 
 ```
-$ sls deploy
+$ npm run deploy
 ```
 
 ## Built With
 
-* [Serverless](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [TypeScript](https://maven.apache.org/) - Dependency Management
-* [MongoDB](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Serverless](http://www.dropwizard.io/1.0.2/docs/) - The Serverless Application framework
+* [Express](https://github.com/expressjs/express) - Web framework for Node
+* [TypeScript](https://maven.apache.org/) - TypeScript
+* [MongoDB](https://rometools.github.io/rome/) - Database
 
 ## Authors
 
