@@ -5,6 +5,8 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import * as serverless from 'serverless-http';
 import { default as Kitten } from './models/Kitten';
+// import logger from './util/logger';
+import { MONGODB_URI, SESSION_SECRET } from './util/secrets';
 
 const app = express(); // Create Express server
 
@@ -12,13 +14,9 @@ const app = express(); // Create Express server
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
-// MongoDB setup
-bluebird.promisifyAll(mongoose as any); // use bluebird for promises
-const mongoUrl = 'mongodb://admin:T5He1tMkFj9Ti9Ng@cluster0-shard-00-00-2mxug.mongodb.net:27017,cluster0-shard-00-01-2mxug.mongodb.net:27017,cluster0-shard-00-02-2mxug.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true';
-
 // MongoDB connection
-mongoose.connect(mongoUrl).then(() => {
+bluebird.promisifyAll(mongoose as any); // use bluebird for promises
+mongoose.connect(MONGODB_URI).then(() => {
   // Ready to use. The `mongoose.connect()` promise resolves to undefined.
 })
 .catch((error) => {
@@ -30,6 +28,7 @@ mongoose.connect(mongoUrl).then(() => {
 app.get('/', (req: express.request, res: express.response) => {
   res.send('hello world');
 });
+app.get('/health-check', (req, res) => res.sendStatus(200)); // 200 OK
 
 app.post('/kitten', (req: express.request, res: express.response) => { // create
   const kitty = new Kitten({ name: req.body.name });
