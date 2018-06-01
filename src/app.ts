@@ -5,7 +5,7 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import * as serverless from 'serverless-http';
 import { default as Kitten } from './models/Kitten';
-// import logger from './util/logger';
+import logger from './util/logger';
 import { MONGODB_URI, SESSION_SECRET } from './util/secrets';
 
 const app = express(); // Create Express server
@@ -73,3 +73,4 @@ app.delete('/kitten/:id', (req: express.request, res: express.response) => { // 
 });
 
 export const init: Handler = serverless(app);
+module.exports = app;

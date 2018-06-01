@@ -1,8 +1,4 @@
-# Basic Microservice starter in NodeJS & Typescript
-
-This project contains the full tutorial code from my [Medium post](https://medium.com/p/ddc185bd5573). It can be used as starting point for Serverless REST microservices made with NodeJS, TypeScript and MongoDB.
-
-For a more extensive version, look at the master branch.
+# Microservice starter in NodeJS & Typescript
 
 ## Getting Started
 
