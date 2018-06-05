@@ -11,9 +11,12 @@
       "es2015.promise"
     ],
     "outDir": "dist",
-    "rootDir": "./src"
+    "baseUrl": "."
   },
   "exclude": [
     "node_modules"
+  ],
+  "include": [
+    "src/**/*"
   ]
 }

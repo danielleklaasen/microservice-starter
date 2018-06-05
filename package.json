@@ -4,13 +4,14 @@
   "description": "Serverless webpack example using Typescript",
   "main": "dist/app.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --forceExit",
     "tslint": "tslint -c tslint.json 'src/**/*.ts'",
     "start": "sls offline start",
     "build": "npm run tslint && npm run build-ts",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
-    "deploy": "sls deploy"
+    "deploy": "sls deploy",
+    "watch": "npm run watch-ts"
   },
   "dependencies": {
     "aws-lambda": "^0.1.2",

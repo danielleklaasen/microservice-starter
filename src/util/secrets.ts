@@ -3,10 +3,10 @@ import * as fs from 'fs';
 import logger from './logger';
 
 if (fs.existsSync('.env')) {
-  logger.debug('Using .env file to supply config environment variables');
+  logger.info('Using .env file to supply config environment variables');
   dotenv.config({ path: '.env' });
 } else {
-  logger.debug('No .env file found.');
+  logger.error('No .env file found.');
 }
 
 export const ENVIRONMENT = process.env.NODE_ENV;
@@ -17,10 +17,8 @@ export const MONGODB_URI = prod ? process.env.MONGODB_URI : process.env.MONGODB_
 
 if (!SESSION_SECRET) {
   logger.error('No client secret. Set SESSION_SECRET environment variable.');
-  process.exit(1);
 }
 
 if (!MONGODB_URI) {
   logger.error('No mongo connection string. Set MONGODB_URI environment variable.');
-  process.exit(1);
 }
