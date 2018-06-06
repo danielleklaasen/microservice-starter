@@ -7,9 +7,15 @@ import * as serverless from 'serverless-http';
 import logger from './util/logger';
 import { MONGODB_URI, SESSION_SECRET } from './util/secrets';
 
+/*
+- [ ] blockchain core engine
+- [ ] blockchain fitting
+- [ ] blockchain connect to mongo
+ */
+
+// Express
 export const app = express(); // Create Express server
 
-// Express configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -36,4 +42,3 @@ app.post('/kitten/:id', kittenController.updateKitten);
 app.delete('/kitten/:id', kittenController.deleteKitten);
 
 export const init: Handler = serverless(app);
-// module.exports = app;

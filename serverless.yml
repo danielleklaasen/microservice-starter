@@ -13,6 +13,14 @@ provider:
 functions:
   init:
     handler: dist/app.init
+    package:
+      exclude:
+        - dist/**
+        - src/**
+      include:
+        - src/app.js
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
+
+

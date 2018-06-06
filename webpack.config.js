@@ -1,6 +1,6 @@
 const path = require('path');
 const slsw = require('serverless-webpack');
-
+const nodeExternals = require('webpack-node-externals');
 const entries = {};
 
 Object.keys(slsw.lib.entries).forEach(key => (
@@ -25,6 +25,7 @@ module.exports = {
     filename: '[name].js',
   },
   target: 'node',
+  externals: [nodeExternals()],
   module: {
     loaders: [
       { test: /\.ts(x?)$/, loader: 'ts-loader' },
