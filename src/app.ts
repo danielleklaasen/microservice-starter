@@ -5,13 +5,7 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import * as serverless from 'serverless-http';
 import logger from './util/logger';
-import { MONGODB_URI, SESSION_SECRET } from './util/secrets';
-
-/*
-- [ ] blockchain core engine
-- [ ] blockchain fitting
-- [ ] blockchain connect to mongo
- */
+import { MONGODB_URI } from './util/secrets';
 
 // Express
 export const app = express(); // Create Express server

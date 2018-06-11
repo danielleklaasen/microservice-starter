@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --forceExit",
     "tslint": "tslint -c tslint.json 'src/**/*.ts'",
-    "start": "sls offline start",
+    "start": "sls offline start -c",
     "build": "npm run tslint && npm run build-ts",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
